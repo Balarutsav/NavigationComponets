@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
 }
+apply plugin: "androidx.navigation.safeargs.kotlin"
 
 android {
     compileSdkVersion 30
@@ -44,6 +45,8 @@ dependencies {
     // Navigation Component Dependencies
     implementation "androidx.navigation:navigation-fragment-ktx:$ktx_version"
     implementation "androidx.navigation:navigation-ui-ktx:$ktx_version"
+
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$ktx_version"
     implementation "androidx.legacy:legacy-support-v4:$legacy_support"
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/addDetailsFragment">
+
+    <fragment
+        android:id="@+id/addDetailsFragment"
+        android:name="com.cruxsolutions.navigationcomponets.Fragment.AddDetailsFragment"
+        android:label="fragment_add_details"
+        tools:layout="@layout/fragment_add_details">
+        <action
+            android:id="@+id/action_addDetailsFragment_to_viewDetails"
+            app:destination="@id/viewDetails">
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/viewDetails"
+        android:name="com.cruxsolutions.navigationcomponets.Fragment.ViewDetails"
+        android:label="fragment_view_details"
+        tools:layout="@layout/fragment_view_details" >
+        <argument
+            android:name="name"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="details"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+</navigation>
